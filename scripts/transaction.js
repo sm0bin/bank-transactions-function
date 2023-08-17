@@ -2,7 +2,7 @@
 document.getElementById('deposit').addEventListener('click', function () {
     const depositAmount = getInputValueById('deposit-amount');
 
-    if (isNaN(depositAmount)) {
+    if (isNaN(depositAmount) || depositAmount <= 0) {
         alert("Insert Valid Amount!");
         return;
     }
@@ -20,7 +20,7 @@ document.getElementById('deposit').addEventListener('click', function () {
 document.getElementById('withdraw').addEventListener('click', function () {
     const withdrawAmount = getInputValueById('withdraw-amount');
 
-    if (isNaN(withdrawAmount)) {
+    if (isNaN(withdrawAmount) || withdrawAmount <= 0) {
         alert("Insert Valid Amount!");
         return;
     }

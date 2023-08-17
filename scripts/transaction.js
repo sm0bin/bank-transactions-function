@@ -11,6 +11,7 @@ document.getElementById('deposit').addEventListener('click', function () {
     const totalDepositAmount = depositAmount + pastDepositAmount;
     setTextElementById('total-deposit', totalDepositAmount);
 
+    // Balance Update
     const balanceAmount = getTextElementById('balance');
     const newBalanceAmount = depositAmount + balanceAmount;
     setTextElementById('balance', newBalanceAmount);
@@ -29,6 +30,7 @@ document.getElementById('withdraw').addEventListener('click', function () {
     const totalWithdrawAmount = withdrawAmount + pastWithdrawAmount;
     setTextElementById('total-withdraw', totalWithdrawAmount);
 
+    // Balance Update
     const balanceAmount = getTextElementById('balance');
 
     if (withdrawAmount > balanceAmount) {
